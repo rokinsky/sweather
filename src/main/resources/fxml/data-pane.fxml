@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import pl.edu.mimuw.sweather.control.WeatherPane?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.control.Button?>
+<?import com.jfoenix.controls.JFXDialog?>
+<?import com.jfoenix.controls.JFXDialogLayout?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.TilePane?>
+
+<GridPane fx:id="containerGrid" xmlns:fx="http://javafx.com/fxml/1"
+		  xmlns="http://javafx.com/javafx/8.0.112-ea">
+	<columnConstraints>
+		<ColumnConstraints percentWidth="40" />
+		<ColumnConstraints percentWidth="60" />
+	</columnConstraints>
+	<rowConstraints>
+		<RowConstraints percentHeight="50" />
+		<RowConstraints percentHeight="50" />
+	</rowConstraints>
+	<StackPane fx:id="imageContainer" styleClass="weather-icon-container2"
+			   GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.rowSpan="2">
+	</StackPane>
+</GridPane>

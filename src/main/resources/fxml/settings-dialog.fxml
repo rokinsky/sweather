@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import com.jfoenix.controls.JFXDialog?>
+<?import com.jfoenix.controls.JFXDialogLayout?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import pl.edu.mimuw.sweather.control.IntervalValidator?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import pl.edu.mimuw.sweather.control.IntervalValidator?>
+<JFXDialog xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.112-ea"
+		   fx:id="dialog" stylesheets="@../css/jfx.css">
+	<JFXDialogLayout fx:id="content">
+		<heading>
+			<Label>Settings</Label>
+		</heading>
+		<body>
+			<GridPane id="settingsGrid">
+				<rowConstraints>
+					<RowConstraints percentHeight="100" />
+					<RowConstraints percentHeight="50" />
+				</rowConstraints>
+
+				<HBox GridPane.rowIndex="1" GridPane.columnIndex="0">
+					<Label>Auto-refresh interval (seconds):</Label>
+					<JFXTextField fx:id="intervalField" promptText="Interval">
+						<validators>
+							<IntervalValidator message="Integer required"></IntervalValidator>
+						</validators>
+					</JFXTextField>
+				</HBox>
+
+				<HBox GridPane.rowIndex="0" GridPane.columnIndex="0">
+					<Label>Weather data source:</Label>
+					<ChoiceBox fx:id="sourceBox">
+					</ChoiceBox>
+				</HBox>
+			</GridPane>
+		</body>
+		<actions>
+			<JFXButton fx:id="acceptButton" styleClass="dialog-button">
+				ACCEPT
+			</JFXButton>
+			<JFXButton fx:id="cancelButton" styleClass="dialog-button">
+				CANCEL
+			</JFXButton>
+		</actions>
+	</JFXDialogLayout>
+</JFXDialog>
